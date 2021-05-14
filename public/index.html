@@ -22,7 +22,7 @@
           <v-flex xs5>
             <div style="margin:10px">
               <ul>
-                <li v-for="snippet in snippetList"><span id='name' v-on:click="goElem(snippet.id)">[{{ snippet.language }}] {{ snippet.title }}</span></li>
+                <li v-for="snippet in snippetList"><span id="name" v-on:click="goElem(snippet.id)">[{{ snippet.language }}] {{ snippet.title }}</span></li>
               </ul>
             </div>
           </v-flex>
@@ -31,9 +31,9 @@
               <v-card-title primary-title>
                 <h3 class="headline">{{ snippet.title }}</h3>
               </v-card-title>
-              <a v-bind:id='snippet.id'></a>
+              <a v-bind:id="snippet.id"></a>
               <div style="margin: 10px 20px;">
-                <textarea style='width:100%; height:300px; background-color:#efefef; padding:3px'>{{ snippet.contents }}</textarea>
+                <textarea style="width:100%; height:300px; background-color:#efefef; padding:3px">{{ snippet.contents }}</textarea>
               </div>
       
               <v-card-actions>
@@ -81,14 +81,14 @@
               Edit Form
             </v-card-title>
     
-            <v-text-field v-model="putTitle" label="Snippet Title" required style='margin:20px; margin-top:30px'></v-text-field>
+            <v-text-field v-model="putTitle" label="Snippet Title" required style="margin:20px; margin-top:30px"></v-text-field>
             <v-flex d-flex>
-              <v-text-field v-model="putLanguage" label="Language" required style='margin:20px; margin-bottom:0px; margin-left:20px'></v-text-field>
+              <v-text-field v-model="putLanguage" label="Language" required style="margin:20px; margin-bottom:0px; margin-left:20px"></v-text-field>
             </v-flex>
             <v-card-text>
               <p>Snippet</p>
-              <div style='width:100%;'>
-                <textarea style='width:100%; height:300px; background-color:#efefef; padding:3px'
+              <div style="width:100%;">
+                <textarea style="width:100%; height:300px; background-color:#efefef; padding:3px"
                 v-model='putContents'></textarea>
               </div>
             </v-card-text>
@@ -203,7 +203,7 @@
               this.dialogDeleteFlag = !this.dialogDeleteFlag
             },
             goElem: function(id) {
-              document.getElementById(id).scrollIntoView(true) // 説明 3.25
+              document.getElementById(id).scrollIntoView(true)
             },
         }
       })
