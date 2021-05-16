@@ -8,7 +8,7 @@
   </head>
   <body>
     <div id="app">
-      <p>{{ message }}</p> <!-- 説明 2.2 -->
+      <p>{{ message }}</p>
       <p>{{ message2 }}</p>
       <button @click="changeMsg">Change</button>
       <ul>
@@ -16,16 +16,16 @@
       </ul>
       <button @click="listSnippet">listSnippet</button>
       <div>
-        <input v-model="title" placeholder="title"> <!-- 説明 2.23 -->
+        <input v-model="title" placeholder="title">
         <input v-model="language" placeholder="language">
         <input v-model="contents" placeholder="contents">
       </div>
       <button @click="postSnippet">postSnippet</button>
     </div>
     <script>
-      new Vue({ // 説明 2.3
-        el: "#app", // 説明 2.4
-        data() { // 説明 2.5
+      new Vue({
+        el: "#app",
+        data() {
           return {
             message: "Hello Vue!",
             message2: 'Hoge',
